@@ -43,6 +43,15 @@
     padding-top: 0;
 }
 
+/* 导航菜单靠左，紧贴标题 */
+.header-nav {
+    justify-content: flex-start;
+}
+
+.menu {
+    margin-left: 32px;
+}
+
 .header::after {
     content: "";
     display: block;
