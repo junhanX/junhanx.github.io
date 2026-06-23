@@ -46,11 +46,12 @@
 .header::after {
     content: "";
     display: block;
-    height: 24px;
+    height: 240px;
     background: linear-gradient(
         to bottom,
         rgba(0, 0, 0, 0.1) 0%,
-        rgba(0, 0, 0, 0.03) 60%,
+        rgba(0, 0, 0, 0.04) 40%,
+        rgba(0, 0, 0, 0.01) 75%,
         transparent 100%
     );
 }
