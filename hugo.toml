@@ -32,10 +32,6 @@ paginate = 10
   # 导航菜单 - 主要内容分区
   mainSections = ['posts']
 
-  # 首页个人介绍
-  [params.homeInfoParams]
-    Title = "Hi，我是 JunhanX 👋"
-
   # 页脚
   [params.footer]
     startYear = "2020"
