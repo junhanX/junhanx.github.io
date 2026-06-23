@@ -74,18 +74,27 @@
     box-shadow: none !important;
     transform: none !important;
     transition: background 200ms ease !important;
-    border-bottom: 1px solid transparent;
-    border-image: linear-gradient(
-        to right,
-        transparent 0%,
-        rgba(0, 0, 0, 0.06) 20%,
-        rgba(0, 0, 0, 0.06) 80%,
-        transparent 100%
-    ) 1;
+    position: relative;
 }
 
-.post-entry:last-of-type {
-    border-bottom: none;
+.post-entry::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.12) 15%,
+        rgba(0, 0, 0, 0.12) 85%,
+        transparent 100%
+    );
+}
+
+.post-entry:last-of-type::after {
+    display: none;
 }
 
 .post-entry:hover {
