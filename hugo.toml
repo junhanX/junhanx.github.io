@@ -50,13 +50,9 @@ paginate = 10
     pageRef = '/tags'
     weight = 20
   [[menus.main]]
-    name = '归档'
-    pageRef = '/archives'
-    weight = 30
-  [[menus.main]]
     name = '关于'
     pageRef = '/about'
-    weight = 40
+    weight = 30
 
 # RSS
 [outputs]
