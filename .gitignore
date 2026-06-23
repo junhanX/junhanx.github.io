@@ -1,0 +1,17 @@
+# Hugo build output
+public/
+
+# Hugo lock file
+.hugo_build.lock
+
+# macOS
+.DS_Store
+
+# Node modules (if needed later)
+node_modules/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo

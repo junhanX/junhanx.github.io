@@ -1,0 +1,61 @@
+baseURL = 'https://junhanx.github.io/'
+locale = 'zh-cn'
+title = 'JunhanX Blog'
+theme = 'PaperMod'
+
+# 分页
+paginate = 10
+
+# 语法高亮
+[markup]
+  [markup.highlight]
+    noClasses = false
+
+[params]
+  # 主页信息
+  description = "技术博客 - 记录学习与思考"
+  author = "JunhanX"
+
+  # 默认主题模式
+  defaultTheme = 'auto'
+  # 首页显示模式
+  ShowReadingTime = true
+  ShowShareButtons = false
+  ShowPostNavLinks = true
+  ShowBreadCrumbs = true
+  ShowCodeCopyButtons = true
+  ShowToc = true
+
+  # 导航菜单 - 主要内容分区
+  mainSections = ['posts']
+
+  [[params.socialIcons]]
+    name = 'github'
+    url = 'https://github.com/junhanX'
+
+[menus]
+  [[menus.main]]
+    name = '文章'
+    pageRef = '/posts'
+    weight = 10
+  [[menus.main]]
+    name = '标签'
+    pageRef = '/tags'
+    weight = 20
+  [[menus.main]]
+    name = '归档'
+    pageRef = '/archives'
+    weight = 30
+  [[menus.main]]
+    name = '关于'
+    pageRef = '/about'
+    weight = 40
+
+# RSS
+[outputs]
+  home = ['HTML', 'RSS', 'JSON']
+
+[taxonomies]
+  category = 'categories'
+  tag = 'tags'
+  series = 'series'
