@@ -13,8 +13,11 @@ paginate = 10
 
 [params]
   # 主页信息
-  description = "技术博客 - 记录学习与思考"
+  description = "Linux / 操作系统 / 虚拟化 · 记录学习与思考"
   author = "JunhanX"
+
+  # 日期格式 — 全角括号
+  DateFormat = "【2006-01-02】"
 
   # 默认主题模式
   defaultTheme = 'auto'
@@ -28,6 +31,19 @@ paginate = 10
 
   # 导航菜单 - 主要内容分区
   mainSections = ['posts']
+
+  # 首页个人介绍
+  [params.homeInfoParams]
+    Title = "Hi，我是 JunhanX 👋"
+    Content = "Linux 内核 / 系统编程 / 虚拟化技术 · 记录学习过程中的思考与总结"
+
+  # 导航栏标签行
+  [params.label]
+    tagline = "Linux / 操作系统 / 虚拟化 · 记录学习与思考"
+
+  # 页脚
+  [params.footer]
+    startYear = "2020"
 
   [[params.socialIcons]]
     name = 'github'
