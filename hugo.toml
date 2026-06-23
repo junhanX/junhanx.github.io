@@ -19,8 +19,9 @@ paginate = 10
   # 日期格式 — 全角括号
   DateFormat = "【2006-01-02】"
 
-  # 默认主题模式
-  defaultTheme = 'auto'
+  # 禁用暗色模式
+  defaultTheme = 'light'
+  disableThemeToggle = true
   # 首页显示模式
   ShowReadingTime = true
   ShowShareButtons = false
