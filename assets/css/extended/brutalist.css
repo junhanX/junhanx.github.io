@@ -64,7 +64,7 @@
     background: #fff !important;
 }
 
-/* ===== 文章列表 — 无卡片，纯文字 + 空白分隔 ===== */
+/* ===== 文章列表 — 无卡片，纯文字 + 渐变过渡 ===== */
 .post-entry {
     background: transparent !important;
     border: none !important;
@@ -74,6 +74,18 @@
     box-shadow: none !important;
     transform: none !important;
     transition: background 200ms ease !important;
+    border-bottom: 1px solid transparent;
+    border-image: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(0, 0, 0, 0.06) 20%,
+        rgba(0, 0, 0, 0.06) 80%,
+        transparent 100%
+    ) 1;
+}
+
+.post-entry:last-of-type {
+    border-bottom: none;
 }
 
 .post-entry:hover {
