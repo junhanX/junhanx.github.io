@@ -40,10 +40,6 @@ paginate = 10
   [params.footer]
     startYear = "2020"
 
-  [[params.socialIcons]]
-    name = 'github'
-    url = 'https://github.com/junhanX'
-
 [menus]
   [[menus.main]]
     name = '文章'
