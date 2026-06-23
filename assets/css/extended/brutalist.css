@@ -46,17 +46,17 @@
 .header::after {
     content: "";
     display: block;
-    height: 4px;
+    height: 24px;
     background: linear-gradient(
         to bottom,
-        rgba(0, 0, 0, 0.12) 0%,
-        rgba(0, 0, 0, 0.04) 40%,
+        rgba(0, 0, 0, 0.1) 0%,
+        rgba(0, 0, 0, 0.03) 60%,
         transparent 100%
     );
 }
 
 .main {
-    padding-top: 44px;
+    padding-top: 32px;
 }
 
 /* ===== 列表背景 ===== */
