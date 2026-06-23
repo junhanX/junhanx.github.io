@@ -1,51 +1,62 @@
-/* ===== 导航栏 ===== */
+/* ===== 导航栏 — 与内容区统一 ===== */
 .header {
-    background: #2b2b2b;
+    background: #fff;
     padding: 0 16px;
 }
 
 .header a {
-    color: #999;
+    color: #777;
     transition: color 200ms ease;
 }
 
 .header a:hover {
-    color: #ccc;
+    color: #333;
 }
 
 .header .logo a {
-    color: #fff;
+    color: #1a1a1a;
     font-weight: 700;
 }
 
 .header .logo a:hover {
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .header .menu .active {
-    color: #fff;
+    color: #1a1a1a;
 }
 
 .header .theme-toggle svg {
     color: #999;
-    transition: color 200ms ease;
-}
-
-.header .theme-toggle:hover svg {
-    color: #ccc;
 }
 
 .header .lang-menu a {
-    color: #999;
+    color: #777;
 }
 
 .header .nav-sep {
-    color: #444;
+    color: #ddd;
 }
 
-/* ===== 导航与内容之间仅用空白分隔 ===== */
+/* ===== 导航与内容之间的黑色过渡 ===== */
 .main {
-    padding-top: 48px;
+    padding-top: 0;
+}
+
+.header::after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.12) 0%,
+        rgba(0, 0, 0, 0.04) 40%,
+        transparent 100%
+    );
+}
+
+.main {
+    padding-top: 44px;
 }
 
 /* ===== 列表背景 ===== */
@@ -200,7 +211,7 @@
     border-color: #333;
 }
 
-/* ===== 文章导航（上一篇/下一篇）===== */
+/* ===== 文章导航 ===== */
 .paginav {
     border-radius: 3px;
 }
