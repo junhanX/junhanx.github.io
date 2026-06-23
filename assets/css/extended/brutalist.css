@@ -75,11 +75,6 @@
                 0 4px 12px rgba(0, 0, 0, 0.04) !important;
     transform: none !important;
     transition: box-shadow 250ms ease, transform 250ms ease !important;
-    position: relative;
-}
-
-.post-entry::after {
-    display: none;
 }
 
 .post-entry:hover {
