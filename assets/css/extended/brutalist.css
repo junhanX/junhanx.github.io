@@ -1,18 +1,25 @@
-/* ===== 导航栏 — 固定深色 ===== */
+/* ===== 导航栏 ===== */
 .header {
-    background: #1a1a1a;
-    border-bottom: 1px solid #2a2a2a;
-    padding-left: 16px;
-    padding-right: 16px;
+    background: #2b2b2b;
+    padding: 0 16px;
 }
 
 .header a {
     color: #999;
+    transition: color 200ms ease;
+}
+
+.header a:hover {
+    color: #ccc;
 }
 
 .header .logo a {
     color: #fff;
     font-weight: 700;
+}
+
+.header .logo a:hover {
+    color: #fff;
 }
 
 .header .menu .active {
@@ -21,6 +28,11 @@
 
 .header .theme-toggle svg {
     color: #999;
+    transition: color 200ms ease;
+}
+
+.header .theme-toggle:hover svg {
+    color: #ccc;
 }
 
 .header .lang-menu a {
@@ -31,14 +43,9 @@
     color: #444;
 }
 
-/* ===== 导航栏下方标签行 ===== */
-.header-tagline {
-    text-align: center;
-    font-size: 14px;
-    color: #666;
-    padding: 10px 0 20px 0;
-    background: #1a1a1a;
-    border-bottom: 1px solid #2a2a2a;
+/* ===== 导航与内容之间仅用空白分隔 ===== */
+.main {
+    padding-top: 48px;
 }
 
 /* ===== 列表背景 ===== */
@@ -46,94 +53,112 @@
     background: #fff !important;
 }
 
-/* ===== 文章卡片 → 纯文字列表 ===== */
+/* ===== 文章列表 — 无卡片，纯文字 + 空白分隔 ===== */
 .post-entry {
     background: transparent !important;
     border: none !important;
     border-radius: 0 !important;
-    padding: 28px 0 !important;
+    padding: 32px 0 !important;
     margin-bottom: 0 !important;
-    border-bottom: 1px solid #eee !important;
     box-shadow: none !important;
     transform: none !important;
+    transition: background 200ms ease !important;
 }
 
-.post-entry:hover,
-.post-entry:focus-within {
+.post-entry:hover {
     transform: none !important;
-    border-color: #e0e0e0 !important;
-    background: transparent !important;
+    background: rgba(0, 0, 0, 0.012) !important;
 }
 
-/* 首篇文章不以大卡片展示 */
+/* 首篇不特殊 */
 .first-entry {
     min-height: auto !important;
-    margin: 0 0 0 0 !important;
-    border-bottom: 1px solid #eee !important;
+    margin: 0 !important;
+    padding: 32px 0 !important;
 }
 
 .first-entry .entry-header h1,
 .first-entry .entry-header h2 {
-    font-size: 22px !important;
-    margin: 0 0 4px 0 !important;
+    font-size: 20px !important;
+    margin: 0 0 6px 0 !important;
 }
 
-/* ===== 标题和元信息 ===== */
+/* ===== 标题与元信息 ===== */
 .entry-header h2 {
     font-size: 19px;
     font-weight: 600;
-    margin: 0 0 4px 0;
+    margin: 0 0 6px 0;
+    line-height: 1.5;
+}
+
+.entry-header h2 a {
+    color: #222;
+    transition: color 200ms ease;
+}
+
+.entry-header h2 a:hover {
+    color: #555;
 }
 
 .entry-content {
-    font-size: 14px;
-    color: #888;
+    font-size: 15px;
+    color: #777;
     margin: 8px 0;
+    line-height: 1.7;
 }
 
 .entry-footer {
     font-size: 13px;
-    color: #aaa;
-}
-
-/* ===== 首页信息区（homeInfoParams）===== */
-.home-info {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    padding: 20px 0 24px 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    border-bottom: 1px solid #eee;
-}
-
-.home-info .entry-header h1 {
-    font-size: 22px;
-    margin-bottom: 4px;
-}
-
-.home-info .entry-content {
     color: #999;
-    margin: 6px 0;
 }
 
-.home-info .social-icons {
-    margin-top: 12px;
+.entry-footer a {
+    color: #888;
+    transition: color 200ms ease;
+}
+
+.entry-footer a:hover {
+    color: #444;
+}
+
+/* ===== 文章详情页 ===== */
+.post-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.post-meta {
+    font-size: 14px;
+    color: #999;
+}
+
+.post-content {
+    font-size: 16px;
+    line-height: 1.85;
+    color: #333;
+}
+
+.post-tags a {
+    border-radius: 3px;
+    font-size: 13px;
+    transition: background 200ms ease;
 }
 
 /* ===== 页脚 ===== */
 .footer {
     color: #aaa;
     font-size: 13px;
-    padding: 24px 0;
+    padding: 40px 0 32px;
 }
 
 .footer a {
-    color: #777;
+    color: #888;
+    transition: color 200ms ease;
 }
 
 .footer a:hover {
-    color: #333;
+    color: #444;
 }
 
 .footer kbd {
@@ -146,51 +171,51 @@
     color: #888;
 }
 
-/* ===== 文章详情页 ===== */
-.post-title {
-    font-size: 28px;
-}
-
-.post-meta {
-    font-size: 14px;
-    color: #aaa;
-}
-
-.post-content {
-    font-size: 16px;
-    line-height: 1.8;
-}
-
-.post-tags a {
-    border-radius: 3px;
-    font-size: 13px;
-}
-
-/* ===== 去除各种圆角 ===== */
-.paginav,
-.paginav a,
-.share-buttons,
-.pagination a,
-details.toc {
-    border-radius: 3px;
-}
-
+/* ===== 面包屑 ===== */
 .breadcrumbs {
     font-size: 13px;
+    color: #aaa;
 }
 
 /* ===== 分页 ===== */
 .pagination {
-    margin-top: 32px;
+    margin-top: 48px;
 }
 
 .pagination a {
-    border: 1px solid #e0e0e0;
-    color: #555;
+    border: 1px solid #e8e8e8;
+    color: #666;
+    border-radius: 3px;
+    transition: background 200ms ease, color 200ms ease;
+}
+
+.pagination a:hover {
+    background: #f5f5f5;
+    color: #333;
 }
 
 .pagination .active a {
     background: #333;
     color: #fff;
     border-color: #333;
+}
+
+/* ===== 文章导航（上一篇/下一篇）===== */
+.paginav {
+    border-radius: 3px;
+}
+
+.paginav a {
+    border-radius: 3px;
+    transition: background 200ms ease;
+}
+
+/* ===== TOC ===== */
+details.toc {
+    border-radius: 3px;
+}
+
+/* ===== 分享按钮 ===== */
+.share-buttons {
+    border-radius: 3px;
 }
